@@ -1,0 +1,8 @@
+original_topic: zdrav.document-remd-proc.pipe.priv
+identifier: c272085a-97ad-407c-9aa9-9ed5824fd373
+total_proc_time: 0
+message: empty SNILS and ENP
+events: newEmrd
+status: ERROR_NO_SNILS
+x-b3-podname: gu-health-document-worker-ff66d686c-92sbw
+b3: 6a608bc328943210cf5c95892d717b55-de6690d8c2b5a270-0
