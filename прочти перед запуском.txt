@@ -9,3 +9,5 @@
 прежде их нужн удалить из:
 БД: em_documents dev 
 табл: public.documents
+
+https://vovaskypolyakov-rgb.github.io/kafka-auto-matching/allure-report/
