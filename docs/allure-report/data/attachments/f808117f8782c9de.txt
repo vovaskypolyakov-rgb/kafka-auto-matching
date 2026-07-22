@@ -1,0 +1,8 @@
+original_topic: zdrav.document-remd-proc.pipe.priv
+identifier: 19c1c599-f17c-44b2-b7d8-c33e41c7cbab
+matching_result: 11011000
+total_proc_time: 134
+events: newEmrd
+status: SUCCESS
+x-b3-podname: gu-health-document-worker-ff66d686c-92sbw
+b3: 6a609202f0acf8174170b41dbe80880d-7997effe465bc438-0
