@@ -1,36 +1,37 @@
 @echo off
 echo ========================================
-echo Запуск тестов...
+echo 1. Запуск тестов...
 call mvn clean test
 
 echo ========================================
-echo Подготовка истории для отчёта...
-if exist "history" (
-    echo Копирование сохранённой истории в результаты...
-    xcopy history target\allure-results\history /E /I /Y
+echo 2. Подготовка истории...
+if exist "target\allure-results\history" (
+    echo Копирование истории из результатов в корень...
+    xcopy target\allure-results\history history /E /I /Y
 ) else (
-    echo Папка history не найдена, создаём...
-    mkdir history
+    echo Папка истории в результатах не найдена.
+    echo Если это первый запуск, создаём историю из результатов...
+    if not exist "history" mkdir history
+    copy target\allure-results\*.json history\ 2>nul
 )
 
 echo ========================================
-echo Генерация Allure-отчёта...
+echo 3. Копирование сохранённой истории в результаты (перед генерацией)...
+if exist "history" (
+    xcopy history target\allure-results\history /E /I /Y
+)
+
+echo ========================================
+echo 4. Генерация Allure-отчёта...
 call mvn allure:report
 
 echo ========================================
-echo Сохранение обновлённой истории...
+echo 5. Сохранение обновлённой истории...
 if exist "target\allure-results\history" (
     xcopy target\allure-results\history history /E /I /Y
-) else (
-    echo Папка истории не создалась (возможно, нет данных)
 )
 
 echo ========================================
-echo Готово! Отчёт доступен по ссылке:
-echo https://vovaskypolyakov-rgb.github.io/kafka-auto-matching/allure-report/
-echo.
-echo Не забудьте запушить изменения:
-echo git add docs/allure-report/ history/
-echo git commit -m "Обновлён Allure-отчёт"
-echo git push
+echo Готово! Отчёт: https://vovaskypolyakov-rgb.github.io/kafka-auto-matching/allure-report/
+echo Не забудьте запушить: git add docs/ history/ && git commit -m "Обновлён отчёт" && git push
 pause
