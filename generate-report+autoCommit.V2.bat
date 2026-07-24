@@ -1,34 +1,30 @@
 @echo off
 echo ========================================
+echo 0. Проверка наличия history.json...
+if not exist "history" mkdir history
+if not exist "history\history.json" (
+    echo Создаём пустой history.json...
+    echo [] > history\history.json
+)
+
+echo ========================================
 echo 1. Запуск тестов...
 call mvn clean test
 
 echo ========================================
-echo 2. Подготовка истории...
-if exist "target\allure-results\history" (
-    echo Копирование истории из результатов в корень...
-    xcopy target\allure-results\history history /E /I /Y
-) else (
-    echo Папка истории в результатах не найдена.
-    echo Если это первый запуск, создаём историю из результатов...
-    if not exist "history" mkdir history
-    copy target\allure-results\*.json history\ 2>nul
+echo 2. Копирование истории в результаты (если есть)...
+if exist "history\history.json" (
+    copy history\history.json target\allure-results\
 )
 
 echo ========================================
-echo 3. Копирование сохранённой истории в результаты (перед генерацией)...
-if exist "history" (
-    xcopy history target\allure-results\history /E /I /Y
-)
-
-echo ========================================
-echo 4. Генерация Allure-отчёта...
+echo 3. Генерация Allure-отчёта...
 call mvn allure:report
 
 echo ========================================
-echo 5. Сохранение обновлённой истории...
-if exist "target\allure-results\history" (
-    xcopy target\allure-results\history history /E /I /Y
+echo 4. Обновление истории после генерации...
+if exist "target\allure-results\history.json" (
+    copy target\allure-results\history.json history\
 )
 
 echo ========================================
