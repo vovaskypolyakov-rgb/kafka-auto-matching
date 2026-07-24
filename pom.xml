@@ -137,11 +137,6 @@
                     <!-- 2. ОТВЕТСТВЕННОЕ ИЗМЕНЕНИЕ: результаты тестов остаются в target/ -->
                     <!-- ============================================================ -->
                     <resultsDirectory>${project.build.directory}/allure-results</resultsDirectory>
-
-                    <!-- ============================================================ -->
-                    <!-- 3. НОВОЕ: папка для истории (Trend) -->
-                    <!-- ============================================================ -->
-                    <historyDirectory>${project.basedir}/history</historyDirectory>
                 </configuration>
             </plugin>
         </plugins>

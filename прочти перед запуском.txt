@@ -19,3 +19,10 @@
 табл: public.documents
 
 https://vovaskypolyakov-rgb.github.io/kafka-auto-matching/allure-report/
+
+
+для инфо
+Запустите тесты и сгенерируйте отчёт:
+mvn clean test
+mvn allure:report
+
