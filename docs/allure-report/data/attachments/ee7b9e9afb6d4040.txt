@@ -1,0 +1,34 @@
+{
+	"emdrId": "224.16.25.09.000241017",
+	"kind": "224",
+	"organization": "1.2.643.5.1.13.13.12.2.16.1080",
+	"creationDateTime": "2026-06-20T08:25:38.000+00:00",
+	"patientSnils": "33276225363",
+	"regOkato": "92000000000",
+	"regionCode": "16",
+	"signer": [],
+	"processingStatus": "NEW",
+	"supplierId": "emdr-rmis-1",
+	"supplierDocId": "77700268-6023-4779-9902-000840bf1516",
+	"deltaMessageTime": "2025-11-24T08:48:14.000+00:00",
+	"patient": {
+		"surname1": "Красильникова",
+		"name1": "Ольга",
+		"patrName1": "Александровна",
+		"birthDate": "1980-09-05",
+		"snils": "33276225363",
+		"enp1": "1851982082633279",
+		"otherId": {
+			"number": "8081342910",
+			"type": "1"
+		}
+	},
+	"representative": {
+		"surname": "",
+		"name": "",
+		"patrName": "",
+		"snils": ""
+	},
+	"docNumber": "0303202301",
+	"docSeries": "45"
+}

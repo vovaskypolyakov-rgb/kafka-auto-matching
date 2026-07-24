@@ -1,1 +1,0 @@
-{"identifier":"19c1c599-f17c-44b2-b7d8-c33e41c7cbab","originalTopic":"zdrav.document-remd-proc.pipe.priv","events":"newEmrd"}

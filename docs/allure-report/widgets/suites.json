@@ -1,1 +1,1 @@
-{"total":1,"items":[{"uid":"3f553e0423329631e05495bbb72515e1","name":"com.example.kafka.KafkaTest","statistic":{"failed":0,"broken":0,"skipped":0,"passed":13,"unknown":0,"total":13}}]}
+{"total":1,"items":[{"uid":"3f553e0423329631e05495bbb72515e1","name":"com.example.kafka.KafkaTest","statistic":{"failed":8,"broken":0,"skipped":0,"passed":15,"unknown":0,"total":23}}]}
