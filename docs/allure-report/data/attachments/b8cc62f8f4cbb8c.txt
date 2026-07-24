@@ -1,0 +1,9 @@
+original_topic: zdrav.document-remd-proc.pipe.priv
+identifier: dd85692e-8561-4543-afbc-656d4bd9f992
+matching_result: 11000000
+total_proc_time: 152
+message: document already exists in database
+events: newEmrd
+status: ERROR_DUPLICATE_DOCUMENT
+x-b3-podname: gu-health-document-worker-ff66d686c-92sbw
+b3: 6a63352a21131ff27bcfbe6e9b77aae8-ae0bfdab488d43d7-0
